@@ -92,6 +92,11 @@ x-init-ollama: &init-ollama
     - "sleep 3; OLLAMA_HOST=ollama:11434 ollama pull qwen2.5:7b-instruct-q4_K_M; OLLAMA_HOST=ollama:11434 ollama pull nomic-embed-text"
 
 services:
+  dentist:
+    image: lucasfuelling/dentist-kanban-flow
+    restart: unless-stopped
+    container_name: dentist-kanban-flow
+    profiles: ["dentist-kanban-flow"]
   flowise:
     image: flowiseai/flowise
     restart: unless-stopped
@@ -260,7 +265,7 @@ services:
       options:
         max-size: "1m"
         max-file: "1"
-        
+
   cloudflared:
     image: cloudflare/cloudflared:latest
     container_name: cloudflared
@@ -273,7 +278,7 @@ services:
       driver: "json-file"
       options:
         max-size: "1m"
-        max-file: "1"  
+        max-file: "1"
 
   langfuse-worker:
     image: langfuse/langfuse-worker:3
@@ -776,7 +781,8 @@ services:
       - paddle_cache:/root/.cache/paddle
       - paddlex_data:/root/.paddlex
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:8080 > /dev/null || exit 1"]
+      test:
+        ["CMD-SHELL", "wget -qO- http://localhost:8080 > /dev/null || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 5

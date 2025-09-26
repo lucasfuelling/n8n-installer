@@ -74,6 +74,7 @@ base_services_data=(
     "searxng" "SearXNG (Private Metasearch Engine)"
     "supabase" "Supabase (Backend as a Service)"
     "weaviate" "Weaviate (Vector Database with API Key Auth)"
+    "dentist" "Kostenvoranschlag Tool (Dentist - Dental Cost Estimation)"
 )
 
 services=() # This will be the final array for whiptail
