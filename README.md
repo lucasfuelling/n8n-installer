@@ -19,7 +19,6 @@ This setup provides a comprehensive suite of cutting-edge services, all pre-conf
 
 ### What's Included
 
-
 ✅ **[Caddy](https://caddyserver.com/), [Postgres](https://www.postgresql.org/), and [Redis](https://redis.io/)** - Core services for web proxy, database, and caching, which are always included.
 
 The installer also makes the following powerful open-source tools **available for you to select and deploy** via an interactive wizard during setup:
@@ -50,7 +49,7 @@ The installer also makes the following powerful open-source tools **available fo
 
 ✅ [**Open WebUI**](https://openwebui.com/) - A user-friendly, ChatGPT-like interface to interact privately with your AI models and n8n agents.
 
-✅ [**PaddleOCR**](https://www.paddleocr.ai/latest/en/index.html) - A CPU-ready OCR API powered by PaddleX Basic Serving. 
+✅ [**PaddleOCR**](https://www.paddleocr.ai/latest/en/index.html) - A CPU-ready OCR API powered by PaddleX Basic Serving.
 
 ✅ [**Portainer**](https://www.portainer.io/) - A lightweight, secure web UI to manage your Docker environment (containers, images, volumes, networks) with ease.
 
@@ -105,7 +104,7 @@ The recommended way to install is using the provided main installation script.
 2.  Run the following command:
 
     ```bash
-    git clone https://github.com/kossakovsky/n8n-installer && cd n8n-installer && sudo bash ./scripts/install.sh
+    git clone https://github.com/lucasfuelling/n8n-installer && cd n8n-installer && sudo bash ./scripts/install.sh
     ```
 
 This single command automates the entire setup process, including:
@@ -176,13 +175,13 @@ After successful installation, your services are up and running! Here's how to g
 
 4.  **Check Monitoring (Optional):**
     - Visit Grafana (`grafana.yourdomain.com`) to see dashboards monitoring your system's performance (data sourced from Prometheus).
-	
 
 ## 🔒 Secure Access with Cloudflare Tunnel (Optional)
 
 Cloudflare Tunnel provides zero-trust access to your services without exposing any ports on your server. All traffic is routed through Cloudflare's secure network, providing DDoS protection and hiding your server's IP address.
 
 ### Benefits
+
 - **No exposed ports** - Ports 80/443 can be completely closed
 - **DDoS protection** - Built-in Cloudflare protection
 - **IP hiding** - Your server's real IP is never exposed
@@ -192,7 +191,6 @@ Cloudflare Tunnel provides zero-trust access to your services without exposing a
 ### Setup Instructions
 
 See the Cloudflare Tunnel guide: [cloudflare-instructions.md](cloudflare-instructions.md)
-
 
 ### Using Pre-installed Libraries in n8n's Custom JavaScript
 
