@@ -97,6 +97,8 @@ services:
     restart: unless-stopped
     container_name: dentist-kanban-flow
     profiles: ["dentist-kanban-flow"]
+    environment:
+      - PORT=80
   flowise:
     image: flowiseai/flowise
     restart: unless-stopped
