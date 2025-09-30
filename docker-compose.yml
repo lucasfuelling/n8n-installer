@@ -95,8 +95,8 @@ services:
   dentist:
     image: lucasfuelling/dentist-kanban-flow:v1.0
     restart: unless-stopped
-    container_name: dentist-kanban-flow
-    profiles: ["dentist-kanban-flow"]
+    container_name: dentist
+    profiles: ["dentist"]
 
   flowise:
     image: flowiseai/flowise
@@ -257,6 +257,7 @@ services:
       - SUPABASE_HOSTNAME=${SUPABASE_HOSTNAME}
       - WEAVIATE_HOSTNAME=${WEAVIATE_HOSTNAME}
       - WEBUI_HOSTNAME=${WEBUI_HOSTNAME}
+      - DENTIST_HOSTNAME=${DENTIST_HOSTNAME}
     cap_drop:
       - ALL
     cap_add:
