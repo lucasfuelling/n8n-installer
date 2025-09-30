@@ -11,7 +11,7 @@
 }
 # dentist
 {$DENTIST_HOSTNAME} {
-    reverse_proxy dentist:8080
+    reverse_proxy dentist:80
 }
 # Open WebUI
 {$WEBUI_HOSTNAME} {
