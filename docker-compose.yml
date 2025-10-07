@@ -93,7 +93,7 @@ x-init-ollama: &init-ollama
 
 services:
   dentist:
-    image: lucasfuelling/dentist-kanban-flow:v1.0
+    image: lucasfuelling/dentist-kanban-flow:latest
     restart: unless-stopped
     container_name: dentist
     profiles: ["dentist"]
