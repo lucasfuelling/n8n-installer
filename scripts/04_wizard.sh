@@ -50,6 +50,9 @@ current_profiles_for_matching=",$CURRENT_PROFILES_VALUE,"
 # --- Define available services and their descriptions ---
 # Base service definitions (tag, description)
 base_services_data=(
+    "n8n" "n8n, n8n-worker, n8n-import (Workflow Automation)"
+    "supabase" "Supabase (Backend as a Service)"
+    "dentist" "Kostenvoranschlag Tool (Dentist - Dental Cost Estimation)"
     "cloudflare-tunnel" "Cloudflare Tunnel (Zero-Trust Secure Access)"
     "comfyui" "ComfyUI (Node-based Stable Diffusion UI)"
     "crawl4ai" "Crawl4ai (Web Crawler for AI)"
@@ -60,7 +63,6 @@ base_services_data=(
     "letta" "Letta (Agent Server & SDK)"
     "libretranslate" "LibreTranslate (Self-hosted translation API - 50+ languages)"
     "monitoring" "Monitoring Suite (Prometheus, Grafana, cAdvisor, Node-Exporter)"
-    "n8n" "n8n, n8n-worker, n8n-import (Workflow Automation)"
     "neo4j" "Neo4j (Graph Database)"
     "ollama" "Ollama (Local LLM Runner - select hardware in next step)"
     "open-webui" "Open WebUI (ChatGPT-like Interface)"
@@ -72,9 +74,7 @@ base_services_data=(
     "qdrant" "Qdrant (Vector Database)"
     "ragapp" "RAGApp (Open-source RAG UI + API)"
     "searxng" "SearXNG (Private Metasearch Engine)"
-    "supabase" "Supabase (Backend as a Service)"
     "weaviate" "Weaviate (Vector Database with API Key Auth)"
-    "dentist" "Kostenvoranschlag Tool (Dentist - Dental Cost Estimation)"
 )
 
 services=() # This will be the final array for whiptail
