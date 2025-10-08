@@ -89,7 +89,7 @@ if is_profile_active "supabase"; then
   echo "External Host (via Caddy): ${SUPABASE_HOSTNAME:-<hostname_not_set>}"
   echo "Studio User: ${DASHBOARD_USERNAME:-<not_set_in_env>}"
   echo "Studio Password: ${DASHBOARD_PASSWORD:-<not_set_in_env>}"
-  echo
+  echo "Postgres Password: ${POSTGRES_PASSWORD:-<not_set_in_env>}"
   echo "Internal API Gateway: http://kong:8000"
   echo "Service Role Secret: ${SERVICE_ROLE_KEY:-<not_set_in_env>}"
 fi
